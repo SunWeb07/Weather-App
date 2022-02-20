@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSZ Weather App</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <style type="text/css">
+      .option{
+font-size: 2.5rem;
+      }
+      a{
+        text-decoration-line: none;
+      }
+    </style>
+</head>
+
+<body>
+    
+    <nav>
+      <div class="logo"><img src="logo.png"></div>
+      <input type="checkbox" id="click">
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        
+      </ul>
+    </nav>
+
+<div class="w3-container ">
+ 
+
+  <div class="w3-margin w3-padding w3-border w3-large" style="width:100%;">
+    <header class="w3-container w3-xxlarge w3-center">
+      <h1>Welcome To CSZ Weather App</h1>
+      <h3>What's Your Weather???</h3>
+    </header>
+
+    <div class="w3-container">
+      <p> A web-based current live location Weather App to get latest weather instantly.</p>
+      <ul class="w3-ul w3-hoverable">
+        <h2>Get weather by giving</h2>
+      <li>Input as city/state/zip code</li>
+      <li>Give your live location</li>
+      <li>Input Coordinates</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<div class="w3-container ">
+ 
+
+  <div class="w3-margin w3-padding w3-border w3-large" style="width:100%;">
+    <header class="w3-container w3-xxlarge w3-center">
+      <h1>Know About Us</h1>
+    </header>
+
+    <div class="w3-container">
+     <a href="about.html"><button class="button-27" role="button" >Click Here</button></a>
+    </div>
+
+  </div>
+</div>
+   <form class="option"><p> <label>Select Input options to give Location for getting Weather</label>
+  <div>  <input type="button" class="w3-button lb" id="i1" name="inputting" onclick="giveOption(0)" value="City"  >
+   
+      <input class="w3-button lb " type="button" id="i2"  name="inputting" onclick="giveOption(1)" value="Location">
+  
+      <input class="w3-button lb" type="button" id="i3"  name="inputting" onclick="giveOption(2)" value="Coordinates">
+   </div> </p>
+   </form> 
+   <section class="top-banner w3-border">
+   
+      
+          <form>
+      
+            <div class="loc w3-animate-left" id="dis1" >
+              <div class="w3-container w3-cell">
+               <label for="state">Choose from list or give input</label>
+  <input list="state" name="state" id="browser">
+  <datalist id="state">
+  <option value="Hyderabad">Hyderabad</option>
+            <option value="Kolkata">Kolkata</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Pune">Pune</option>
+            <option value="Lucknow">Lucknow</option>
+            <option value="Dehli">Dehli</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Kanpur">Kanpur</option>
+            <option value="Srinagar">Srinagar</option>
+            <option value="Kargil">Kargil</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Banglore">Banglore</option>
+            <option value="Surat">Surat</option>
+            <option value="Pondicherry">Pondicherry</option>
+            <option value="New York">New York</option>
+            <option value="Washington">Washington</option>
+            <option value="Florida">Florida</option>
+            <option value="Durban">Durban</option>
+            <option value="Johannesburg">Johannesburg</option>
+            <option value="Sydney">Sydney</option>
+            <option value="Melbourne">Melbourne</option>
+            <option value="Cardiff">Cardiff</option>
+            <option value="Vegas">Vegas</option>
+            <option value="London">London</option>
+  </datalist>
+</div>
+       
+                <div class="w3-container w3-cell">  <button type="submit" class="button-27" role="button" style="text-align: center;">SUBMIT</button>
+      </div>
+     </div>
+     <div class="loc w3-animate-zoom" id="dis2">
+         <div class="w3-container w3-cell"> 
+<p> Click on the Location Icon.Your Desktop/Mobile browser will ask for "Allow Location".Select on allow location and get current location weather.<b>Note</b>:Given feature will work once only.</p></div>
+   <div class="w3-container w3-cell"> 
+            <button  type="button" id="btn" onclick="getWeather()" >
+           <svg id="lock" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24"><path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/></svg>
+            </button></div>
+</div>
+<div class="loc w3-animate-right" id="dis3">
+  <div class="w3-container w3-cell">
+    <h3>Lattitude</h3>
+  <p>Latitude is a measurement on a globe or map of location north or south of the Equator. Technically, there are different kinds of latitude—geocentric, astronomical, and geographic (or geodetic)—but there are only minor differences between them. In most common references, geocentric latitude is implied. Given in degrees, minutes, and seconds, geocentric latitude is the arc subtended by an angle at Earth’s centre and measured in a north-south plane poleward from the Equator. Thus, a point at 30°15′20″ N subtends an angle of 30°15′20″at the centre of the globe; similarly, the arc between the Equator and either geographic pole is 90° (one-fourth the circumference of Earth, or 1/4 × 360°), and thus the greatest possible latitudes are 90° N and 90° S. As aids to indicate different latitudinal positions on maps or globes, equidistant circles are plotted and drawn parallel to the Equator and each other; they are known as parallels, or parallels of latitude.For more <a href="https://www.britannica.com/science/latitude">Click here</a></p>
+  <label for="lati">Lattitude
+    <input type="number" name="lati" id="lt" class="ipll" placeholder="input Lattitude coordinate for your location"></label>   
+</div>
+
+     <div class="w3-container w3-cell">
+      
+      
+            <h3>Longitude</h3>
+            <p>Longitude is a measurement of location east or west of the prime meridian at Greenwich, the specially designated imaginary north-south line that passes through both geographic poles and Greenwich, London. Measured also in degrees, minutes, and seconds, longitude is the amount of arc created by drawing first a line from Earth’s centre to the intersection of the Equator and the prime meridian and then another line from Earth’s centre to any point elsewhere on the Equator. Longitude is measured 180° both east and west of the prime meridian. As aids to locate longitudinal positions on a globe or map, meridians are plotted and drawn from pole to pole where they meet. The distance per degree of longitude at the Equator is about 111.32 km (69.18 miles) and at the poles, 0.For more <a href="https://www.britannica.com/science/latitude">Click here</a></p>
+                   <label for="longi">Longitude<input type="number" placeholder="input Longitude coordinate for your location" name="longi" id="lo" class="ipll"></label> 
+            
+</div>
+<div class="w3-container w3-large"><button type="button" class="button-27" role="button" onclick="getWeatherByLl()" >SUBMIT</button></div>
+         </div>
+       
+         
+         
+            </form>
+      
+      </section>
+      <section class="ajax-section">
+        <div class="container">
+          <ul class="cities"></ul>
+
+<!--  <div id="id02" class="w3-modal">
+<div class="w3-modal-content">
+<button class="btn" onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-white">Close</button>
+        <div  ><ul id='tasks'></ul></div>
+</div>
+        </div>--> 	 
+<div id="id01" class="w3-modal">	
+<div class="w3-modal-content">
+<button class="btn" onclick="document.getElementById('id01').style.display='none'" class="button-27" role="button" ><i class="fa fa-close" style="font-size:48px;align-self: left;"></i></button>
+<table  class="w3-table-all w3-responsible  w3-centered" >
+<thead >
+<tr>
+<th>Properties</th>
+<th>Values</th>
+
+</tr>
+
+</thead>
+<tbody id="tbody"></tbody>
+
+</table>
+</div>
+</div>
+</div>
+      </section>
+  
+
+
+
+       <footer id ="footer" class="footer-distributed">
+
+      <div class="footer-left">
+<img src="logo.png">
+
+        <p class="footer-links">
+          <a href="#" class="link-1">Home</a>
+          
+      
+          <a href="#">About</a>
+        
+          <a href="#">Contact</a>
+         
+        </p>
+
+      </div>
+
+      <div class="footer-center">
+
+        
+
+      </div>
+
+      <div class="footer-right">
+
+        <p class="footer-company-about">
+          <span ><a href="about.html" style="color: black;">About App</a></span>
+         Web-Based Current Live Location Weather Application
+        </p>
+
+
+  
+
+      </div>
+<p>Project completed under Methodist College of Engineering and Technology</p>
+    </footer>
+   
+      
+      <script src="js/app.js"></script>
+
+<script src="js/script.js"></script>
+
+      
+<script src="js/latlonfun.js"></script>
+    </body>
+
+</html>
