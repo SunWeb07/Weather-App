@@ -255,7 +255,7 @@ padding:5%;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  width: 100%;
+  width: 20%;
   will-change: transform;
 }
 
@@ -273,9 +273,13 @@ padding:5%;
   transform: translateY(0);
 }
 .lb{
+	border-radius:25px;
+	margin:10px;
+	padding:0.5rem;
   border: 1px solid #fff;
   background: black;
   color: white;
+	
 }
 .city button{
 padding:10px;
@@ -373,9 +377,11 @@ width: 100%;
 #dis3 label{
   font-weight: bolder;
 }
+
 #dis2 button{
   margin: 0;
   padding: 0;
+	border:1px solid grey;
 }
 /* SECTION #2
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
