@@ -1,6 +1,4 @@
-* RESET STYLES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-:root {
+* RESET STYLES –––––––––––––––––––––––––––––––––––––––––––––––––– */ :root {
   --bg_main: #0a1f44;
   --text_light: #fff;
   --text_med: #53627c;
@@ -9,28 +7,32 @@
   --darkred: #c3112d;
   --orange: #ff8c00;
 }
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins','Roboto', sans-serif;
-} 
-input:focus{
-    outline: none;
-    box-shadow: 0px 0px 5px #61C5FA;
-    border-color: #5AB0DB;
+  font-family: "Poppins", "Roboto", sans-serif;
 }
- input:hover{
-    border: 1px solid #999;
-    border-radius: 25px;
-
- }
+input:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px #61c5fa;
+  border-color: #5ab0db;
+}
+.hey{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+input:hover {
+  border: 1px solid #999;
+  border-radius: 25px;
+}
 /*.ipll
 {
-  width: 14%;
-  margin: 2%;
-  border:1px #0a1f44 solid;
+width: 14%;
+margin: 2%;
+border:1px #0a1f44 solid;
 }*/
 button {
   cursor: pointer;
@@ -38,43 +40,36 @@ button {
 
 /*navigation-------------*/
 
-
-nav{
+nav {
   display: flex;
 
-  
-  
   align-items: center;
   justify-content: space-between;
- 
+
   flex-wrap: wrap;
-  
 }
-nav .logo{
- 
+nav .logo {
   font-size: 35px;
   font-weight: 600;
 }
-nav .logo{
+nav .logo {
   margin: 0;
   padding: 0;
 }
-nav .logo img{
+nav .logo img {
   width: 100%;
   height: 50%;
   display: inline;
-
 }
-nav ul{
+nav ul {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
 }
-nav ul li{
+nav ul li {
   margin: 0 5px;
 }
-nav ul li a{
-
+nav ul li a {
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
@@ -84,68 +79,97 @@ nav ul li a{
   transition: all 0.3s ease;
 }
 nav ul li a.active,
-nav ul li a:hover{
+nav ul li a:hover {
   color: #fff;
   background: #111;
 }
-nav .menu-btn i{
+nav .menu-btn i {
   color: #fff;
   font-size: 22px;
   cursor: pointer;
   display: none;
 }
-input[type="checkbox"]{
+input[type="checkbox"] {
   display: none;
 }
-@media (max-width: 1000px){
-  nav{
-    padding: 0 40px 0 50px;
+/* CSS */
+.button-27 {
+  appearance: none;
+  background-color: #fff;
+  border: 2px solid #1a1a1a;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  will-change: transform;
+}
+
+@media (max-width: 1000px) {
+  nav {
+      padding: 0 40px 0 50px;
   }
 }
 @media (max-width: 920px) {
-  nav .menu-btn i{
-    display: block;
+  nav .menu-btn i {
+      display: block;
   }
-  #click:checked ~ .menu-btn i:before{
-    content: "\f00d";
+  #click:checked ~ .menu-btn i:before {
+      content: "\f00d";
   }
-  nav ul{
-    position: fixed;
-    top: 80px;
-    left: -100%;
-    background: #111;
-    height: 100vh;
-    width: 100%;
-    text-align: center;
-    display: block;
-    transition: all 0.3s ease;
+  nav ul {
+      position: fixed;
+      top: 80px;
+      left: -100%;
+      background: #111;
+      height: 100vh;
+      width: 100%;
+      text-align: center;
+      display: block;
+      transition: all 0.3s ease;
   }
-  #click:checked ~ ul{
-    left: 0;
+  #click:checked ~ ul {
+      left: 0;
   }
-  nav ul li{
-    width: 100%;
-    margin: 40px 0;
+  nav ul li {
+      width: 100%;
+      margin: 40px 0;
   }
-  nav ul li a{
-    width: 100%;
-    margin-left: -100%;
-    display: block;
-    font-size: 20px;
-    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  nav ul li a {
+      width: 100%;
+      margin-left: -100%;
+      display: block;
+      font-size: 20px;
+      transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
-  #click:checked ~ ul li a{
-    margin-left: 0px;
+  #click:checked ~ ul li a {
+      margin-left: 0px;
   }
   nav ul li a.active,
-  nav ul li a:hover{
-    background: none;
-    color: cyan;
+  nav ul li a:hover {
+      background: none;
+      color: cyan;
   }
 }
 
-
-.content{
+.content {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -156,15 +180,15 @@ input[type="checkbox"]{
   padding: 0 30px;
   color: #1b1b1b;
 }
-.content div{
+.content div {
   font-size: 40px;
   font-weight: 700;
 }
 /*  
 input {
-  -webkit-appearance: none;
+-webkit-appearance: none;
 }
-  */
+*/
 button,
 input {
   border: none;
@@ -185,7 +209,6 @@ ul {
 
 body {
   font: 1rem/1.3 "Roboto", sans-serif;
-
 }
 .container {
   width: 100%;
@@ -193,71 +216,41 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
-.loc{
-  
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin:0 auto;
+.loc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 
-padding:50px;
+  padding: 50px;
 }
 /*.nav{
-  margin:0 auto;
+margin:0 auto;
 }
 
 
 .nav ul{
-  list-style-type: none;
+list-style-type: none;
 overflow: hidden;
 }
 
 li {
-  display: inline;
+display: inline;
 padding:2.6%;
 }
 
 
- li a {
+li a {
 
-  color: rgb(0, 0, 0);
-  text-align: center;
+color: rgb(0, 0, 0);
+text-align: center;
 
-  width: 0 auto;
+width: 0 auto;
 
 padding:5%;
-  text-decoration: none;
+text-decoration: none;
 }*/
 
-
-/* CSS */
-.button-27 {
-  appearance: none;
-  background-color: #fff;
-  border: 2px solid #1A1A1A;
-  border-radius: 15px;
-  box-sizing: border-box;
-  color: #000;
-  cursor: pointer;
-  display: inline-block;
-  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-  font-size: 16px;
-  font-weight: 600;
-  line-height: normal;
-  margin: 0;
-  min-height: 60px;
-  min-width: 0;
-  outline: none;
-  padding: 16px 24px;
-  text-align: center;
-  text-decoration: none;
-  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: 20%;
-  will-change: transform;
-}
 
 .button-27:disabled {
   pointer-events: none;
@@ -272,24 +265,24 @@ padding:5%;
   box-shadow: none;
   transform: translateY(0);
 }
-.lb{
-	border-radius:25px;
-	margin:10px;
-	padding:0.5rem;
+.lb {
+  border-radius: 25px;
+  margin: 10px;
+  padding: 0.5rem;
   border: 1px solid #fff;
   background: black;
   color: white;
-	
 }
-.city button{
-padding:10px;
-background:black;
-color:white;
+.city button {
+  padding: 10px;
+  background: black;
+  color: white;
 }
-#dis1,#dis2,#dis3{
-  display:none;
+#dis1,
+#dis2,
+#dis3 {
+  display: none;
   border: 1px solid #ddd;
-  padding: 5%;
   font-size: 1.5rem;
 }
 li a:hover {
@@ -301,46 +294,41 @@ li a:hover {
 .top-banner {
   color: var(--text_light);
 }
-#push a{
+#push a {
   color: white;
 }
 .heading {
   font-weight: bold;
- 
-  letter-spacing: 0.02em;
-  
 
+  letter-spacing: 0.02em;
 }
-.heading h1{
-font-size:4rem;
-text-align:center;
+.heading h1 {
+  font-size: 4rem;
+  text-align: center;
 }
-.heading nav{
-padding:2.5%;
-text-align:center;}
+.heading nav {
+  padding: 2.5%;
+  text-align: center;
+}
 .top-banner form {
   position: relative;
   display: flex;
   align-items: center;
 }
-.option{
- padding:5px;
-		
+.option {
+  padding: 5px;
 
-text-align:center;
-
-
+  text-align: center;
 }
 
 .top-banner form input {
   border: 1px solid #000000;
   height: 40px;
   padding: 7%;
-  
 }
 
 .top-banner form input::placeholder {
-  color: --var(currentColor); 
+  color: --var(currentColor);
 }
 
 .top-banner form button {
@@ -359,29 +347,27 @@ text-align:center;
 }
 
 #dis1 input {
-width: 100%;
-
-}
-#dis3 h3{
-  font-size: 3rem;
-  font-weight: bold;
-
-}
-#dis3 input{
-  margin: 10px;
   width: 100%;
 }
-#dis3 p{
-  font-size:1.5rem; 
+#dis3 h3 {
+  font-size: 3rem;
+  font-weight: bold;
 }
-#dis3 label{
+#dis3 input {
+  margin: 10px 0;
+  width: 50%;
+}
+#dis3 p {
+  font-size: 1.5em;
+}
+#dis3 label {
   font-weight: bolder;
 }
 
-#dis2 button{
+#dis2 button {
   margin: 0;
   padding: 0;
-	border:1px solid grey;
+  border: 1px solid grey;
 }
 /* SECTION #2
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -404,7 +390,7 @@ width: 100%;
 }
 
 .ajax-section .city::after {
-  content: '';
+  content: "";
   width: 90%;
   height: 50px;
   position: absolute;
@@ -448,85 +434,80 @@ width: 100%;
 
 @media screen and (max-width: 1000px) {
   body {
-    padding: 30px;
+      padding: 30px;
   }
-  
+
   .ajax-section .cities {
-    grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media screen and (max-width: 700px) {
   .heading,
   .ajax-section .city-temp {
-    font-size: 3rem;
+      font-size: 3rem;
   }
-  
+
   .ajax-section {
-    margin-top: 20px;
+      margin-top: 20px;
   }
-  
+
   .top-banner form {
-    flex-direction: column;
-    align-items: flex-start;
+      flex-direction: column;
+      align-items: flex-start;
   }
-  
+
   .top-banner form input,
   .top-banner form button {
-    width: 100%;
+      width: 100%;
   }
 
   .top-banner form button {
-    margin: 20px 0 0 0;
+      margin: 20px 0 0 0;
   }
-  
+
   .top-banner form .msg {
-    position: static;
-    max-width: none;
-    min-height: 0;
-    margin-top: 10px;
+      position: static;
+      max-width: none;
+      min-height: 0;
+      margin-top: 10px;
   }
 
   .ajax-section .cities {
-    grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr);
   }
-.option{
-width:100%;
-display:block;
+  .option {
+      width: 100%;
+      display: block;
+  }
 }
-
 @media screen and (max-width: 500px) {
   body {
-    padding: 15px;
+      padding: 15px;
   }
-  
+
   .ajax-section .cities {
-    grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: repeat(1, 1fr);
   }
 }
 
+#id01 .btn {
+  float: right;
 
-
-#id01 .btn{
-float:right;
-
-padding:5px;
+  padding: 5px;
 }
 table {
-clear:right;
-background:skyblue;
+  clear: right;
+  background: skyblue;
 }
-thead{
-  font-weight:bold;
-  font-size:1.5rem;
-  color:green;
-  
+thead {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: green;
 }
-tbody{
-  color:brown;
-  
+tbody {
+  color: brown;
 }
-tbody tr:hover{
-  background:yellow;
-  
+tbody tr:hover {
+  background: yellow;
 }
